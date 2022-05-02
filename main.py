@@ -57,7 +57,7 @@ class PongGame():
                 if event.type == pygame.QUIT:
                     quit()
 
-            output_1 = net1.activate((self.right.y,  self.ball.y, abs(self.ball.x - self.left_paddle.x)))
+            output_1 = net1.activate((self.right_paddle.y,  self.ball.y, abs(self.ball.x - self.left_paddle.x)))
             decision_1 = output_1.index(max(output_1))
 
             if decision_1 == 0:
@@ -136,5 +136,9 @@ if __name__ == "__main__":
 
     config = neat.Config(neat.DefaultGenome,neat.DefaultReproduction,
                          neat.DefaultSpeciesSet,neat.DefaultStagnation, config_path)
+
+    # To run NEAT and train the AI
     run_neat(config)
+
+    # To play against the AI
     #test_ai(config)
