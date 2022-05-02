@@ -1,2 +1,7 @@
 # NEAT-pong
-Classic Pong with NEAT A,I
+Classic Pong with NEAT A.I
+
+#Requirements
+pygame
+neat
+
