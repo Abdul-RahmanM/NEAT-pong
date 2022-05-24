@@ -3,7 +3,7 @@ import neat
 import pygame
 import pickle
 import time
-from pong import Game
+from game import Game
 
 class PongGame():
     def __init__(self, window, width, height):
